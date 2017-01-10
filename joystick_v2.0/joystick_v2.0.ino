@@ -1,6 +1,5 @@
 #include "Joystick.h"
 
-//new for version 2.0 -> Joystick must be a variable
 Joystick_ Joystick;
 
 int throttle = 0;
@@ -69,7 +68,6 @@ void rollFalling() {
 }
 
 void loop() {
-  //new for version 2.0 -> mapping must be done differently
   Joystick.setYAxis(map(throttleValue, 1050, 1960, 512, 1023));
   Joystick.setXAxis(map(yawValue, 1050, 1960, 512, 1023));
   Joystick.setZAxis(map(pitchValue, 1050, 1960, 512, 1023));
